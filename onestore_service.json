@@ -1,0 +1,116 @@
+{
+  "service": "OneStore Agent",
+  "description": "Handles product discovery, inventory count checks, and order placement for the Chatbot POC.",
+  "data_type": "static_json",
+  "tools": [
+    {
+      "action_id": "product_discovery",
+      "action_name": "Product discovery",
+      "type": "static_data_lookup",
+      "data_source": "products"
+    },
+    {
+      "action_id": "inventory_count",
+      "action_name": "Inventory count",
+      "type": "static_data_lookup",
+      "data_source": "inventory"
+    },
+    {
+      "action_id": "place_order",
+      "action_name": "Place an order",
+      "type": "static_data_write",
+      "data_source": "orders_placed",
+      "request_schema": {
+        "customerId": "string",
+        "sku": "string",
+        "quantity": "integer",
+        "shippingAddress": "string"
+      }
+    }
+  ],
+  "products": [
+    {
+      "sku": "SP-BT-100",
+      "productName": "Compact Bluetooth Speaker",
+      "category": "Tech",
+      "subCategory": "Speakers",
+      "price": 24.99,
+      "currency": "USD",
+      "moq": 25,
+      "imprintMethods": ["Laser Engraving", "Digital Full-Color"],
+      "description": "Portable wireless Bluetooth speaker with 5-hour battery life, available for logo branding.",
+      "inStock": true
+    },
+    {
+      "sku": "SP-BT-210",
+      "productName": "Waterproof Outdoor Bluetooth Speaker",
+      "category": "Tech",
+      "subCategory": "Speakers",
+      "price": 34.50,
+      "currency": "USD",
+      "moq": 25,
+      "imprintMethods": ["Screen Printing", "Digital Full-Color"],
+      "description": "IPX6 rated speaker with carabiner clip, ideal for outdoor promotions.",
+      "inStock": true
+    },
+    {
+      "sku": "SP-BT-305",
+      "productName": "Mini Pocket Bluetooth Speaker",
+      "category": "Tech",
+      "subCategory": "Speakers",
+      "price": 18.75,
+      "currency": "USD",
+      "moq": 50,
+      "imprintMethods": ["Laser Engraving"],
+      "description": "Budget-friendly compact speaker, great for high-volume giveaways.",
+      "inStock": true
+    },
+    {
+      "sku": "EB-500",
+      "productName": "Wireless Earbuds - Branded Case",
+      "category": "Tech",
+      "subCategory": "Ear Buds/Headphones",
+      "price": 12.50,
+      "currency": "USD",
+      "moq": 100,
+      "imprintMethods": ["Digital Full-Color", "Debossing"],
+      "description": "True wireless earbuds in a custom-branded charging case.",
+      "inStock": true
+    },
+    {
+      "sku": "WB-750",
+      "productName": "Stainless Steel Water Bottle 750ml",
+      "category": "Drinkware",
+      "subCategory": "Aluminum & Stainless Bottles",
+      "price": 8.75,
+      "currency": "USD",
+      "moq": 50,
+      "imprintMethods": ["Laser Engraving", "Screen Printing"],
+      "description": "Double-wall insulated stainless steel bottle.",
+      "inStock": true
+    }
+  ],
+  "inventory": [
+    {"sku": "SP-BT-100", "warehouse": "WH-EAST-01", "availableUnits": 4200, "reservedUnits": 300, "reorderThreshold": 500},
+    {"sku": "SP-BT-210", "warehouse": "WH-EAST-01", "availableUnits": 1850, "reservedUnits": 150, "reorderThreshold": 300},
+    {"sku": "SP-BT-305", "warehouse": "WH-WEST-02", "availableUnits": 9600, "reservedUnits": 1200, "reorderThreshold": 1000},
+    {"sku": "EB-500", "warehouse": "WH-EAST-01", "availableUnits": 2750, "reservedUnits": 400, "reorderThreshold": 500},
+    {"sku": "WB-750", "warehouse": "WH-WEST-02", "availableUnits": 6100, "reservedUnits": 800, "reorderThreshold": 700}
+  ],
+  "orders_placed": [
+    {
+      "orderId": "OS-ORD-55012",
+      "customerId": "CUST-10234",
+      "sku": "SP-BT-100",
+      "productName": "Compact Bluetooth Speaker",
+      "quantity": 50,
+      "unitPrice": 24.99,
+      "totalAmount": 1249.50,
+      "currency": "USD",
+      "orderDate": "2026-08-18T10:30:00Z",
+      "status": "Order Confirmed",
+      "shippingAddress": "Zenith Retail Pvt Ltd, Pune, Maharashtra, India",
+      "estimatedDelivery": "2026-08-28"
+    }
+  ]
+}

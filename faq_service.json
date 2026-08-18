@@ -1,0 +1,250 @@
+{
+  "service": "FAQ Agent",
+  "description": "Handles FAQ lookups (e.g. MOQ, imprint methods, shipping, returns) for the Chatbot POC. Content adapted in summary form from MARCO Promos' public ordering FAQ page.",
+  "data_type": "static_json",
+  "source_reference": "https://www.marcopromos.com/info/orderingfaqs",
+  "tools": [
+    {
+      "action_id": "get_faq_answer",
+      "action_name": "FAQ - MOQ, Imprint methods, etc.",
+      "type": "static_data_lookup",
+      "data_source": "faqs"
+    }
+  ],
+  "faq_categories": [
+    "Ordering Basics",
+    "Samples & Product Evaluation",
+    "Product & Imprint Questions",
+    "Artwork & Proofs",
+    "Pricing & Quotes",
+    "Production & Turnaround Times",
+    "Shipping & Delivery",
+    "Changes, Cancellations & Returns",
+    "Payment & Billing",
+    "Company Stores & Programs"
+  ],
+  "faqs": [
+    {
+      "faqId": "FAQ-001",
+      "category": "Ordering Basics",
+      "question": "How do I place an order?",
+      "answer": "Orders can be placed online by choosing a product, quantity, and uploading artwork, or by working directly with a promo specialist over phone, live chat, or email."
+    },
+    {
+      "faqId": "FAQ-002",
+      "category": "Ordering Basics",
+      "question": "Do I need an account to order?",
+      "answer": "An account is not required, but having one lets you save artwork, view order history, and reorder more easily."
+    },
+    {
+      "faqId": "FAQ-003",
+      "category": "Ordering Basics",
+      "question": "What is the minimum order quantity (MOQ)?",
+      "answer": "MOQ differs by product and is listed in the pricing table on each product's page."
+    },
+    {
+      "faqId": "FAQ-004",
+      "category": "Ordering Basics",
+      "question": "Is there special pricing for bulk or recurring orders?",
+      "answer": "Larger quantities unlock discounted price tiers, and custom quotes are available for ongoing corporate programs."
+    },
+    {
+      "faqId": "FAQ-005",
+      "category": "Ordering Basics",
+      "question": "Can I reorder a previous item?",
+      "answer": "Yes, artwork is kept on file for at least a year, so reordering is possible via account history or a previous order number."
+    },
+    {
+      "faqId": "FAQ-006",
+      "category": "Samples & Product Evaluation",
+      "question": "Can I see a sample before I buy?",
+      "answer": "Free samples are generally offered to verified businesses; items outside the free program may carry a small fee, which is credited back if an order is placed or the sample is returned within 30 days. Sample requests are typically limited to about 5 items."
+    },
+    {
+      "faqId": "FAQ-007",
+      "category": "Samples & Product Evaluation",
+      "question": "Can I get a sample with my logo on it?",
+      "answer": "Yes, custom logo (spec) samples are available for a small setup fee and may need extra production time."
+    },
+    {
+      "faqId": "FAQ-008",
+      "category": "Samples & Product Evaluation",
+      "question": "How long does sample delivery take?",
+      "answer": "Standard samples typically ship within a few business days, while custom logo samples take longer depending on the decoration method."
+    },
+    {
+      "faqId": "FAQ-009",
+      "category": "Product & Imprint Questions",
+      "question": "What imprint methods do you offer?",
+      "answer": "Available decoration methods include screen printing, embroidery, laser engraving, digital full-color printing, debossing, direct-to-garment, and others depending on the product."
+    },
+    {
+      "faqId": "FAQ-010",
+      "category": "Product & Imprint Questions",
+      "question": "Will the imprint color match my brand exactly?",
+      "answer": "Pantone (PMS) color matching is offered on most items, though slight variation can occur depending on the material being printed on."
+    },
+    {
+      "faqId": "FAQ-011",
+      "category": "Product & Imprint Questions",
+      "question": "Do you offer eco-friendly or sustainable products?",
+      "answer": "Yes, a dedicated range of recycled, reusable, and responsibly sourced products is available."
+    },
+    {
+      "faqId": "FAQ-012",
+      "category": "Artwork & Proofs",
+      "question": "What artwork file types do you accept?",
+      "answer": "Vector files (AI, EPS, PDF) are preferred for the sharpest print quality; high-resolution PNG or JPG files are also accepted."
+    },
+    {
+      "faqId": "FAQ-013",
+      "category": "Artwork & Proofs",
+      "question": "What if I don't have a high-quality logo file?",
+      "answer": "Basic artwork cleanup and formatting is generally offered at no charge, and a specialist can help trace, recolor, or otherwise prepare a logo for imprinting."
+    },
+    {
+      "faqId": "FAQ-014",
+      "category": "Artwork & Proofs",
+      "question": "Can I use AI-generated images for my imprint?",
+      "answer": "AI-generated images are usually low-resolution and can look blurry once enlarged for print; the art team can often recreate or vectorize the design to get a print-ready result."
+    },
+    {
+      "faqId": "FAQ-015",
+      "category": "Artwork & Proofs",
+      "question": "Will I see a proof before my order is printed?",
+      "answer": "A free digital proof is provided for every order, and production begins only after final approval."
+    },
+    {
+      "faqId": "FAQ-016",
+      "category": "Pricing & Quotes",
+      "question": "How do I know I'm getting the best price?",
+      "answer": "Pricing is transparent and includes the product cost, quantity discounts, and clearly stated setup fees, with a price-match guarantee versus equal-quality competitor products."
+    },
+    {
+      "faqId": "FAQ-017",
+      "category": "Pricing & Quotes",
+      "question": "What is a setup fee?",
+      "answer": "A setup fee is a one-time charge to create the screens, dies, or plates needed for a specific logo; it is waived on exact reorders."
+    },
+    {
+      "faqId": "FAQ-018",
+      "category": "Pricing & Quotes",
+      "question": "How long is my quote valid?",
+      "answer": "Quotes remain valid for 30 days, with the expiration date clearly noted."
+    },
+    {
+      "faqId": "FAQ-019",
+      "category": "Production & Turnaround Times",
+      "question": "What is the standard turnaround time?",
+      "answer": "Most items are produced within about 5 to 10 business days after proof approval, with shipping adding roughly 3 to 5 more days, though this varies by product and imprint method."
+    },
+    {
+      "faqId": "FAQ-020",
+      "category": "Production & Turnaround Times",
+      "question": "Do you offer rush production?",
+      "answer": "Free 24-hour production is available on hundreds of items; look for the rush indicator or ask a representative for expedited options."
+    },
+    {
+      "faqId": "FAQ-021",
+      "category": "Shipping & Delivery",
+      "question": "How much does shipping cost?",
+      "answer": "Shipping cost depends on the product, order size, shipping method, and delivery destination."
+    },
+    {
+      "faqId": "FAQ-022",
+      "category": "Shipping & Delivery",
+      "question": "Can I ship to multiple locations?",
+      "answer": "Split shipments to multiple offices or remote teams are supported, though additional shipping fees may apply."
+    },
+    {
+      "faqId": "FAQ-023",
+      "category": "Shipping & Delivery",
+      "question": "Will I receive tracking information?",
+      "answer": "Tracking information is provided once an order ships so delivery can be monitored."
+    },
+    {
+      "faqId": "FAQ-024",
+      "category": "Shipping & Delivery",
+      "question": "Can I use my own shipping account?",
+      "answer": "Customers can often use their own shipping account; this should be communicated to the representative at the time of ordering."
+    },
+    {
+      "faqId": "FAQ-025",
+      "category": "Shipping & Delivery",
+      "question": "Can I ship internationally?",
+      "answer": "International shipping is possible for many products, but availability varies; a FedEx or UPS account number is typically required, and a foreign document fee applies."
+    },
+    {
+      "faqId": "FAQ-026",
+      "category": "Changes, Cancellations & Returns",
+      "question": "Can I change my order after it's placed?",
+      "answer": "Changes may be limited or incur extra costs once artwork is approved and production has begun, so requests should be made as early as possible."
+    },
+    {
+      "faqId": "FAQ-027",
+      "category": "Changes, Cancellations & Returns",
+      "question": "Can I cancel my order?",
+      "answer": "Cancellation may not be possible once production has started, and charges may apply for completed work; a representative can review the order status."
+    },
+    {
+      "faqId": "FAQ-028",
+      "category": "Changes, Cancellations & Returns",
+      "question": "What is your return policy?",
+      "answer": "Because items are custom-branded, returns are generally only accepted for manufacturing defects or printing errors."
+    },
+    {
+      "faqId": "FAQ-029",
+      "category": "Changes, Cancellations & Returns",
+      "question": "What if there is an error with my order?",
+      "answer": "Orders that arrive damaged or differ from the approved proof should be reported within 15 business days of delivery for resolution via replacement or credit; a partial return of product may be required for full refunds."
+    },
+    {
+      "faqId": "FAQ-030",
+      "category": "Payment & Billing",
+      "question": "What payment methods do you accept?",
+      "answer": "Major credit cards and other approved business payment methods are accepted."
+    },
+    {
+      "faqId": "FAQ-031",
+      "category": "Payment & Billing",
+      "question": "When is my credit card charged?",
+      "answer": "The card is authorized at the time of order, but funds are only collected once the order ships."
+    },
+    {
+      "faqId": "FAQ-032",
+      "category": "Payment & Billing",
+      "question": "Why am I being charged sales tax?",
+      "answer": "Sales tax is collected in states where required by law, based on the shipping destination."
+    },
+    {
+      "faqId": "FAQ-033",
+      "category": "Payment & Billing",
+      "question": "Are tax-exempt orders supported?",
+      "answer": "Customers can email their tax-exemption certificate so tax can be removed from the final invoice."
+    },
+    {
+      "faqId": "FAQ-034",
+      "category": "Payment & Billing",
+      "question": "What if I receive more or fewer items than I ordered?",
+      "answer": "Extra units shipped (overruns) are provided at no additional charge, and shortages are billed only for the quantity actually received."
+    },
+    {
+      "faqId": "FAQ-035",
+      "category": "Company Stores & Programs",
+      "question": "Do you offer custom company/swag stores?",
+      "answer": "Custom online storefronts can be built for employees or customers, including product setup, on-demand production, fulfillment, and distribution management."
+    },
+    {
+      "faqId": "FAQ-036",
+      "category": "Company Stores & Programs",
+      "question": "Can you handle multi-location or multi-department orders?",
+      "answer": "Multi-location and multi-department programs are supported, including split shipping and multiple access levels for centralized brand control."
+    },
+    {
+      "faqId": "FAQ-037",
+      "category": "Company Stores & Programs",
+      "question": "Can you manage inventory, fulfillment, and distribution?",
+      "answer": "Inventory management, warehousing, and fulfillment support are available for qualifying ongoing merchandise programs."
+    }
+  ]
+}

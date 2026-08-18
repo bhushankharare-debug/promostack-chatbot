@@ -1,0 +1,128 @@
+{
+  "service": "ERP Agent",
+  "description": "Handles order status lookups and top best-selling items reporting for the Chatbot POC.",
+  "data_type": "static_json",
+  "tools": [
+    {
+      "action_id": "get_order_status",
+      "action_name": "What's my order status",
+      "type": "static_data_lookup",
+      "data_source": "orders"
+    },
+    {
+      "action_id": "get_top_selling_items",
+      "action_name": "Top best selling items",
+      "type": "static_data_lookup",
+      "data_source": "top_selling_items"
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "ORD-78341",
+      "customerId": "CUST-10234",
+      "customerName": "Rohan Sharma",
+      "orderDate": "2026-08-10T00:00:00Z",
+      "status": "In Production",
+      "items": [
+        {"sku": "SKU-1001", "productName": "Stainless Steel Water Bottle 750ml", "quantity": 300, "unitPrice": 285, "currency": "INR"}
+      ],
+      "estimatedShipDate": "2026-08-22",
+      "trackingNumber": null,
+      "totalAmount": 85500,
+      "currency": "INR"
+    },
+    {
+      "orderId": "ORD-78102",
+      "customerId": "CUST-10234",
+      "customerName": "Rohan Sharma",
+      "orderDate": "2026-07-28T00:00:00Z",
+      "status": "Shipped",
+      "items": [
+        {"sku": "SKU-1045", "productName": "Wireless Earbuds - Branded Case", "quantity": 150, "unitPrice": 950, "currency": "INR"}
+      ],
+      "estimatedShipDate": "2026-08-02",
+      "trackingNumber": "TRK-99213456",
+      "carrier": "BlueDart",
+      "totalAmount": 142500,
+      "currency": "INR"
+    },
+    {
+      "orderId": "ORD-77654",
+      "customerId": "CUST-10501",
+      "customerName": "Ayesha Khan",
+      "orderDate": "2026-07-05T00:00:00Z",
+      "status": "Delivered",
+      "items": [
+        {"sku": "SKU-2002", "productName": "Cotton Canvas Tote Bag", "quantity": 500, "unitPrice": 95, "currency": "INR"}
+      ],
+      "estimatedShipDate": "2026-07-12",
+      "deliveredDate": "2026-07-15",
+      "trackingNumber": "TRK-99187720",
+      "carrier": "Delhivery",
+      "totalAmount": 47500,
+      "currency": "INR"
+    },
+    {
+      "orderId": "ORD-79005",
+      "customerId": "CUST-10890",
+      "customerName": "David Fernandes",
+      "orderDate": "2026-08-16T00:00:00Z",
+      "status": "Pending Approval",
+      "items": [
+        {"sku": "SKU-3010", "productName": "Custom Logo Baseball Cap", "quantity": 1000, "unitPrice": 175, "currency": "INR"}
+      ],
+      "estimatedShipDate": null,
+      "trackingNumber": null,
+      "totalAmount": 175000,
+      "currency": "INR",
+      "holdReason": "Credit limit reached - order on hold pending finance approval"
+    }
+  ],
+  "top_selling_items": [
+    {
+      "rank": 1,
+      "sku": "SKU-1001",
+      "productName": "Stainless Steel Water Bottle 750ml",
+      "category": "Drinkware",
+      "unitsSoldLast90Days": 18400,
+      "revenue": 5244000,
+      "currency": "INR"
+    },
+    {
+      "rank": 2,
+      "sku": "SKU-2002",
+      "productName": "Cotton Canvas Tote Bag",
+      "category": "Bags",
+      "unitsSoldLast90Days": 15230,
+      "revenue": 1446850,
+      "currency": "INR"
+    },
+    {
+      "rank": 3,
+      "sku": "SKU-3010",
+      "productName": "Custom Logo Baseball Cap",
+      "category": "Apparel",
+      "unitsSoldLast90Days": 12980,
+      "revenue": 2271500,
+      "currency": "INR"
+    },
+    {
+      "rank": 4,
+      "sku": "SKU-1045",
+      "productName": "Wireless Earbuds - Branded Case",
+      "category": "Tech",
+      "unitsSoldLast90Days": 9870,
+      "revenue": 9376500,
+      "currency": "INR"
+    },
+    {
+      "rank": 5,
+      "sku": "SKU-4021",
+      "productName": "Custom Printed Lanyard",
+      "category": "Lanyards",
+      "unitsSoldLast90Days": 8620,
+      "revenue": 517200,
+      "currency": "INR"
+    }
+  ]
+}

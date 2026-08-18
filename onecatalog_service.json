@@ -1,0 +1,112 @@
+{
+  "service": "OneCatalog Agent",
+  "description": "Handles catalog creation, credit balance checks, and best performing flyer retrieval for the Chatbot POC.",
+  "data_type": "static_json",
+  "tools": [
+    {
+      "action_id": "create_catalog",
+      "action_name": "Create a catalog",
+      "type": "static_mock_action",
+      "description": "POC placeholder only — does not call any real API. When triggered, it simply returns a static confirmation response so the chatbot can show a 'Catalog Created' popup/message to the user.",
+      "linked_endpoint_for_future_use": "http://catalogcreate.com",
+      "mock_response": {
+        "status": "success",
+        "popupMessage": "✅ Your catalog has been created successfully!",
+        "catalogId": "CAT-88291",
+        "createdAt": "2026-08-18T10:15:00Z"
+      },
+      "note": "No request body or live API call needed for the POC. Any 'create a catalog' user query should simply trigger this mock_response and display popupMessage to the user."
+    },
+    {
+      "action_id": "check_credit_balance",
+      "action_name": "Check credit balance",
+      "type": "static_data_lookup",
+      "data_source": "credit_balances"
+    },
+    {
+      "action_id": "fetch_best_performing_flyer",
+      "action_name": "Fetch my best performing flyer",
+      "type": "static_data_lookup",
+      "data_source": "flyers"
+    }
+  ],
+  "credit_balances": [
+    {
+      "customerId": "CUST-10234",
+      "customerName": "Rohan Sharma",
+      "company": "Zenith Retail Pvt Ltd",
+      "creditLimit": 500000,
+      "creditUsed": 182500,
+      "creditAvailable": 317500,
+      "currency": "INR",
+      "lastUpdated": "2026-08-15T09:00:00Z",
+      "status": "Good Standing"
+    },
+    {
+      "customerId": "CUST-10501",
+      "customerName": "Ayesha Khan",
+      "company": "Bluewave Marketing",
+      "creditLimit": 250000,
+      "creditUsed": 240000,
+      "creditAvailable": 10000,
+      "currency": "INR",
+      "lastUpdated": "2026-08-16T11:30:00Z",
+      "status": "Near Limit"
+    },
+    {
+      "customerId": "CUST-10890",
+      "customerName": "David Fernandes",
+      "company": "Orbit Distributors",
+      "creditLimit": 0,
+      "creditUsed": 1000000,
+      "creditAvailable": 0,
+      "currency": "INR",
+      "lastUpdated": "2026-08-10T14:20:00Z",
+      "status": "On Hold"
+    }
+  ],
+  "flyers": [
+    {
+      "flyerId": "FLYER-2201",
+      "flyerName": "Summer Drinkware Blast",
+      "customerId": "CUST-10234",
+      "createdAt": "2026-06-01T00:00:00Z",
+      "views": 12480,
+      "clicks": 3210,
+      "conversions": 486,
+      "conversionRate": "15.1%",
+      "revenueGenerated": 942500,
+      "currency": "INR",
+      "rank": 1,
+      "flyerUrl": "http://catalogcreate.com/view/FLYER-2201"
+    },
+    {
+      "flyerId": "FLYER-2044",
+      "flyerName": "Back-to-Office Tech Essentials",
+      "customerId": "CUST-10234",
+      "createdAt": "2026-04-15T00:00:00Z",
+      "views": 8760,
+      "clicks": 1980,
+      "conversions": 265,
+      "conversionRate": "13.4%",
+      "revenueGenerated": 512300,
+      "currency": "INR",
+      "rank": 2,
+      "flyerUrl": "http://catalogcreate.com/view/FLYER-2044"
+    },
+    {
+      "flyerId": "FLYER-1987",
+      "flyerName": "Trade Show Giveaway Pack",
+      "customerId": "CUST-10234",
+      "createdAt": "2026-02-20T00:00:00Z",
+      "views": 5410,
+      "clicks": 990,
+      "conversions": 102,
+      "conversionRate": "10.3%",
+      "revenueGenerated": 198700,
+      "currency": "INR",
+      "rank": 3,
+      "flyerUrl": "http://catalogcreate.com/view/FLYER-1987"
+    }
+  ]
+}
